@@ -5,4 +5,5 @@
     <dimen name="marginBetweenButtons">11dp</dimen>
     <dimen name="marginLeftTextView">100dp</dimen>
     <dimen name="marginTopLandUser">120dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>
