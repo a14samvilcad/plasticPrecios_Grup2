@@ -14,12 +14,12 @@
         android:theme="@style/Theme.PlasticPrecios_Grup2"
         tools:targetApi="31" >
         <activity
-            android:name=".activityHome"
+            android:name=".inicio"
             android:exported="false"
-            android:label="@string/title_activity_home"
+            android:label="@string/title_activity_inicio"
             android:theme="@style/Theme.PlasticPrecios_Grup2.NoActionBar" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Login"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
