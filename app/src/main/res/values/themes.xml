@@ -19,7 +19,12 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="Theme.PlasticPrecios_Grup2.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.PlasticPrecios_Grup2.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
 
-    <style name="Theme.PlasticPrecios_Grup2.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    </style>
+
+    <style name="Theme.PlasticPrecios_Grup2.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:background">@color/purple_200</item>
+
+    </style>
 </resources>
