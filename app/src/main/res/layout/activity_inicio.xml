@@ -11,8 +11,10 @@
         android:layout_height="wrap_content"
         android:theme="@style/Theme.PlasticPrecios_Grup2.AppBarOverlay">
 
+        //El menu esta invisible, si no se necesitara puede borrarse el codigo
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
+            android:visibility="invisible"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
