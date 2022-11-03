@@ -14,4 +14,8 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_home">activityHome</string>
     <string name="title_activity_inicio">inicio</string>
+    <string name="newPassword">Introdueixi la contrasenya</string>
+    <string name="newPasswordCheck">Introdueixi de nou la contrasenya</string>
+    <string name="newName">Introduexi el seu nom</string>
+    <string name="saveNewUser">Inscriures</string>
 </resources>

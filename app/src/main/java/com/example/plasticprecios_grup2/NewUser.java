@@ -6,24 +6,19 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class Login extends AppCompatActivity {
+public class NewUser extends AppCompatActivity {
 
     private static final int TEXT_REQUEST = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_new_user);
     }
 
-
-    public void launchInicio(View view) {
+    public void saveNewUser(View view) {
 
         Intent intent = new Intent(this, inicio.class);
         startActivityForResult(intent, TEXT_REQUEST);
-
-    }
-
-    public void launchNewUser(View view) {
     }
 }
