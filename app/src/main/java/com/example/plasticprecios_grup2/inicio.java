@@ -1,5 +1,6 @@
 package com.example.plasticprecios_grup2;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -17,6 +18,7 @@ import com.example.plasticprecios_grup2.databinding.ActivityInicioBinding;
 
 public class inicio extends AppCompatActivity {
 
+    private static final int TEXT_REQUEST = 1;
     private AppBarConfiguration appBarConfiguration;
     private ActivityInicioBinding binding;
 
@@ -47,5 +49,9 @@ public class inicio extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_inicio);
         return NavigationUI.navigateUp(navController, appBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    public void cestaClick(View view) {
+
     }
 }

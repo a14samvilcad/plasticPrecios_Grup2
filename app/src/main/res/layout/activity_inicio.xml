@@ -18,11 +18,23 @@
             android:background="@drawable/fondo"
             app:popupTheme="@style/Theme.PlasticPrecios_Grup2.PopupOverlay">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="end"
-                android:text="hola"/>
+            <ImageView
+                android:id="@+id/cestaImage"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="320dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="20dp"
+                android:onClick="cestaClick"
+
+                android:background="@drawable/bolso"
+                />
+
+
+
+
+
         </androidx.appcompat.widget.Toolbar>
 
     </com.google.android.material.appbar.AppBarLayout>
