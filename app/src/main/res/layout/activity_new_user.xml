@@ -19,37 +19,40 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/newName"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:hint="@string/newName" />
+        <EditText
+            android:id="@+id/newName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="180dp"
+            android:hint="@string/newName" />
 
-    <EditText
-        android:id="@+id/newPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="@string/newPassword"
-        />
+        <EditText
+            android:id="@+id/newPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/newPassword" />
 
-    <EditText
-        android:id="@+id/newPasswordCheck"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:hint="@string/newPasswordCheck"
-        />
+        <EditText
+            android:id="@+id/newPasswordCheck"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/newPasswordCheck" />
 
-    <Button
-        android:id="@+id/saveNewUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="310dp"
-        android:layout_marginLeft="270dp"
-        android:text="@string/saveNewUser"
-        android:onClick="saveNewUser"/>
+        <TextView
+            android:id="@+id/infoError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/saveNewUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="270dp"
+            android:layout_marginTop="310dp"
+            android:onClick="saveNewUser"
+            android:text="@string/saveNewUser" />
 
     </LinearLayout>
 </RelativeLayout>
