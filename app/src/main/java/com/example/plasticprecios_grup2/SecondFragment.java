@@ -4,6 +4,10 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.ImageSwitcher;
+import android.widget.ImageView;
+import android.widget.ViewSwitcher;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -14,6 +18,11 @@ import com.example.plasticprecios_grup2.databinding.FragmentSecondBinding;
 public class SecondFragment extends Fragment {
 
     private FragmentSecondBinding binding;
+
+    //ImageSwitcher variables
+    int index = 0;
+    int galeria[] = {R.drawable.avatar, R.drawable.libreta, R.drawable.llavero};
+    ImageSwitcher imageSwitcher = binding.imageSwitcher.findViewById(R.id.imageSwitcher);
 
     @Override
     public View onCreateView(
@@ -26,18 +35,47 @@ public class SecondFragment extends Fragment {
 
     }
 
-    /*
+
+
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
+
+        binding.beforeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(SecondFragment.this)
-                        .navigate(R.id.action_SecondFragment_to_FirstFragment);
+                --index;
+                if (index < 0){
+                    index = galeria.length-1;
+                }
+                imageSwitcher.setImageResource(galeria[index]);
             }
         });
-    }*/
+
+        binding.nextButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                index++;
+                if (index == galeria.length){
+                    index = 0;
+                }
+                imageSwitcher.setImageResource(galeria[index]);
+            }
+        });
+
+        imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
+            @Override
+            public View makeView() {
+                ImageView imageView = new ImageView(getApplicationContext());
+
+
+                return null;
+            }
+        });
+
+    }
+
+
 
     @Override
     public void onDestroyView() {
