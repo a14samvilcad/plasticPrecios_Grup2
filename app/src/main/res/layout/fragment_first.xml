@@ -75,9 +75,10 @@
                         <Button
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="60dp"
+                            android:layout_marginLeft="80dp"
                             android:backgroundTint="@color/black"
                             android:text="+"
+                            android:textColor="@color/white"
                             android:textSize="20sp"
                             />
 
