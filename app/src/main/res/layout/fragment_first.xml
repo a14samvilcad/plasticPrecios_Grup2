@@ -170,6 +170,24 @@
         android:text="Popular"
         />
 
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <TableRow>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/libreta"/>
+
+            <TextView
+                android:text="Libretita de plastico"/>
+        </TableRow>
+
+    </TableLayout>
 
 
 
