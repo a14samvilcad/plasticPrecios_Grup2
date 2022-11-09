@@ -18,6 +18,8 @@ import com.example.plasticprecios_grup2.databinding.FragmentSecondBinding;
 public class SecondFragment extends Fragment {
 
     private FragmentSecondBinding binding;
+
+    //Variables para ImageSwitcher
     int index = 0;
     int galeria[] = {R.drawable.avatar, R.drawable.libreta, R.drawable.llavero};
 
@@ -28,9 +30,10 @@ public class SecondFragment extends Fragment {
     ) {
         binding = FragmentSecondBinding.inflate(inflater, container, false);
 
-        //ImageSwitcher variables
+        //ImageSwitcher bindeado a el imageSwitcher del xml
         ImageSwitcher imageSwitcher = binding.imageSwitcher.findViewById(R.id.imageSwitcher);
 
+        //Boton para pasar imagen para atras bindeado al xml + OnClick
         binding.beforeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -42,6 +45,7 @@ public class SecondFragment extends Fragment {
             }
         });
 
+        //Boton para pasar imagen para atras bindeado al xml + OnClick
         binding.nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
