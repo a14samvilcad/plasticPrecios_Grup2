@@ -18,28 +18,18 @@ import com.example.plasticprecios_grup2.databinding.FragmentSecondBinding;
 public class SecondFragment extends Fragment {
 
     private FragmentSecondBinding binding;
-
-    //ImageSwitcher variables
     int index = 0;
     int galeria[] = {R.drawable.avatar, R.drawable.libreta, R.drawable.llavero};
-    ImageSwitcher imageSwitcher = binding.imageSwitcher.findViewById(R.id.imageSwitcher);
 
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
-
         binding = FragmentSecondBinding.inflate(inflater, container, false);
-        return binding.getRoot();
 
-    }
-
-
-
-    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
+        //ImageSwitcher variables
+        ImageSwitcher imageSwitcher = binding.imageSwitcher.findViewById(R.id.imageSwitcher);
 
         binding.beforeButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,12 +56,28 @@ public class SecondFragment extends Fragment {
         imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
             @Override
             public View makeView() {
-                ImageView imageView = new ImageView(getApplicationContext());
+                ImageView imageView = new ImageView(getActivity().getApplicationContext());
+                imageView.setScaleType(ImageView.ScaleType.FIT_CENTER);
+                imageView.setMaxWidth(250);
+                imageView.setMaxHeight(250);
 
-
-                return null;
+                return imageView;
             }
         });
+
+        imageSwitcher.setImageResource(galeria[index]);
+
+
+        return binding.getRoot();
+
+    }
+
+
+
+
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
 
     }
 
