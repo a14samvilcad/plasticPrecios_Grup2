@@ -36,14 +36,35 @@ public class SecondFragment extends Fragment {
         binding = FragmentSecondBinding.inflate(inflater, container, false);
 
         //ImageSwitcher bindeado a el imageSwitcher del xml
-        ImageSwitcher imageSwitcher = binding.imageSwitcher.findViewById(R.id.imageSwitcher);
+        cambioImageSwitcher(binding);
 
-        //TextView del numero de productos bindeado al TextView del xml
+        //Llamamos a la funcion que hace el cambio en el textView del numero de productos
         cambioContadorNProductos(binding);
 
+        return binding.getRoot();
+
+    }
 
 
 
+
+    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+
+
+    }
+
+
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null;
+    }
+
+    public void cambioImageSwitcher(FragmentSecondBinding binding){
+        //ImageSwitcher bindeado a el imageSwitcher del xml
+        ImageSwitcher imageSwitcher = binding.imageSwitcher.findViewById(R.id.imageSwitcher);
 
         //Boton para pasar imagen para atras bindeado al xml + OnClick
         binding.beforeButton.setOnClickListener(new View.OnClickListener() {
@@ -82,28 +103,8 @@ public class SecondFragment extends Fragment {
         });
 
         imageSwitcher.setImageResource(galeria[index]);
-
-
-        return binding.getRoot();
-
     }
 
-
-
-
-    public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-
-
-    }
-
-
-
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        binding = null;
-    }
 
     public void cambioContadorNProductos(FragmentSecondBinding binding){
         TextView mostrarContador = binding.nProductes.findViewById(R.id.nProductes);
