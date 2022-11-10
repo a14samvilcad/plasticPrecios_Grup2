@@ -67,14 +67,46 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/precioProducto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="35'99€"
                 android:layout_marginLeft="40dp"
-                android:layout_marginTop="10dp"
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="20sp"/>
+
+            <Button
+                android:id="@+id/btnMenos"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="-"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:onClick="countDown"
+                />
+
+            <TextView
+                android:id="@+id/nProductes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:layout_marginLeft="5dp"/>
+
+            <Button
+                android:id="@+id/btnMas"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="+"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/white"
+                android:layout_marginLeft="5dp"
+                android:onClick="countUp"
+                />
+
 
 
 

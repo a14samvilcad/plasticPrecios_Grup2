@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.ViewSwitcher;
 
 import androidx.annotation.NonNull;
@@ -23,6 +24,10 @@ public class SecondFragment extends Fragment {
     int index = 0;
     int galeria[] = {R.drawable.avatar, R.drawable.libreta, R.drawable.llavero};
 
+    //Variables para el numero de productos (augmentar-disminuir)
+    private int contNumProductes = 1;
+
+
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -32,6 +37,13 @@ public class SecondFragment extends Fragment {
 
         //ImageSwitcher bindeado a el imageSwitcher del xml
         ImageSwitcher imageSwitcher = binding.imageSwitcher.findViewById(R.id.imageSwitcher);
+
+        //TextView del numero de productos bindeado al TextView del xml
+        cambioContadorNProductos(binding);
+
+
+
+
 
         //Boton para pasar imagen para atras bindeado al xml + OnClick
         binding.beforeButton.setOnClickListener(new View.OnClickListener() {
@@ -92,5 +104,32 @@ public class SecondFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
+    public void cambioContadorNProductos(FragmentSecondBinding binding){
+        TextView mostrarContador = binding.nProductes.findViewById(R.id.nProductes);
+
+        binding.btnMenos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                contNumProductes--;
+                if (mostrarContador != null){
+                    mostrarContador.setText(Integer.toString(contNumProductes));
+                }
+            }
+        });
+
+        binding.btnMas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                contNumProductes++;
+                if (mostrarContador != null){
+                    mostrarContador.setText(Integer.toString(contNumProductes));
+                }
+            }
+        });
+    }
+
+
+
 
 }
