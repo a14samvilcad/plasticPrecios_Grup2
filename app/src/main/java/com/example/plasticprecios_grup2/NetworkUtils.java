@@ -19,10 +19,8 @@ public class NetworkUtils {
     private static final String BOOK_BASE_URL =  "localhost:3000/loginUser";
     // Parameter for the search string.
     private static final String QUERY_PARAM = "q";
-    // Parameter that limits search results.
-    private static final String MAX_RESULTS = "maxResults";
     // Parameter to filter by print type.
-    private static final String PRINT_TYPE = "printType";
+    //private static final String PRINT_TYPE = "printType";
 
 
     static String getUserInfo(String queryString) throws IOException {
@@ -32,16 +30,16 @@ public class NetworkUtils {
 
         //Necesario cambiar la api url
         try {
+            //
+
             Uri builtURI = Uri.parse(BOOK_BASE_URL).buildUpon()
                     .appendQueryParameter(QUERY_PARAM, queryString)
-                    .appendQueryParameter(MAX_RESULTS, "10")
-                    .appendQueryParameter(PRINT_TYPE, "books")
                     .build();
 
             URL requestURL = new URL(builtURI.toString());
 
             urlConnection = (HttpURLConnection) requestURL.openConnection();
-            urlConnection.setRequestMethod("GET");
+            urlConnection.setRequestMethod("POST");
             urlConnection.connect();
 
             // Get the InputStream.
@@ -89,8 +87,7 @@ public class NetworkUtils {
         }
 
         Log.d(LOG_TAG, userJSONString);
-
-        return null;
+        return userJSONString;
     }
 
 

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class Login extends AppCompatActivity {
 
@@ -33,9 +34,14 @@ public class Login extends AppCompatActivity {
 
     }
 
+
+
     public void searchUser(View view){
         String queryStringUser = userName.getText().toString();
         String queryStringPsw = passwordUser.getText().toString();
+
+        //mirar como hay que pasar el userName y la PWD en el mismo string
+        new FetchUsers(userName, passwordUser).execute(queryStringUser + "," + queryStringPsw);
 
     }
 }
