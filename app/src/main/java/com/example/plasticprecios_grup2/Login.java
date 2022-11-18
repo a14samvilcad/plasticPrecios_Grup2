@@ -4,17 +4,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 public class Login extends AppCompatActivity {
 
     private static final int TEXT_REQUEST = 1;
-
-    //Elements login
-    private EditText userName;
-    private EditText passwordUser;
 
 
     @Override
@@ -22,8 +22,27 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        userName = (EditText)findViewById(R.id.editText_User);
-        passwordUser = (EditText)findViewById(R.id.editText_Password);
+
+        findViewById(R.id.login).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                handleLoginDialog();
+            }
+        });
+
+        findViewById(R.id.signup).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                handleSignupDialog();
+            }
+        });
+    }
+
+    private void handleSignupDialog() {
+    }
+
+    private void handleLoginDialog(){
+
     }
 
 
@@ -34,14 +53,4 @@ public class Login extends AppCompatActivity {
 
     }
 
-
-
-    public void searchUser(View view){
-        String queryStringUser = userName.getText().toString();
-        String queryStringPsw = passwordUser.getText().toString();
-
-        //mirar como hay que pasar el userName y la PWD en el mismo string
-        new FetchUsers(userName, passwordUser).execute(queryStringUser + "," + queryStringPsw);
-
-    }
 }

@@ -3,6 +3,8 @@ package com.example.plasticprecios_grup2;
 import android.net.Uri;
 import android.util.Log;
 
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -23,7 +25,7 @@ public class NetworkUtils {
     //private static final String PRINT_TYPE = "printType";
 
 
-    static String getUserInfo(String queryString) throws IOException {
+    static String getUserInfo(JSONObject jsonObject) throws IOException {
         HttpURLConnection urlConnection = null;
         BufferedReader reader = null;
         String userJSONString = null;
@@ -33,7 +35,7 @@ public class NetworkUtils {
             //
 
             Uri builtURI = Uri.parse(BOOK_BASE_URL).buildUpon()
-                    .appendQueryParameter(QUERY_PARAM, queryString)
+                    .appendQueryParameter(QUERY_PARAM, "sdss")
                     .build();
 
             URL requestURL = new URL(builtURI.toString());

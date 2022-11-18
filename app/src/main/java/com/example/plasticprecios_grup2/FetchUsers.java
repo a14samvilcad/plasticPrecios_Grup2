@@ -3,18 +3,14 @@ package com.example.plasticprecios_grup2;
 import android.os.AsyncTask;
 import android.widget.TextView;
 
+import org.json.JSONObject;
+
 import java.io.IOException;
 import java.lang.ref.WeakReference;
 
 public class FetchUsers extends AsyncTask<String, Void, String> {
 
-    private WeakReference<TextView> mUserName;
-    private WeakReference<TextView> mPwdUser;
-
-    public FetchUsers(TextView userName, TextView pwdUser) {
-        this.mUserName = new WeakReference<>(userName);
-        this.mPwdUser = new WeakReference<>(pwdUser);
-    }
+    private WeakReference<JSONObject> jsonObjectWeakReference;
 
 
     @Override
