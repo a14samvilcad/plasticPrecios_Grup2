@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginEditText"
+        android:hint="Usuario"
+        android:id="@+id/nameEdit"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginEditText"
+        android:hint="Contraseña"
+        android:id="@+id/passwordEdit"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/marginButtonSignUp"
+        android:text="INICIAR SESIÓN"
+        android:id="@+id/signup"
+        />
+
+
+
+</LinearLayout>

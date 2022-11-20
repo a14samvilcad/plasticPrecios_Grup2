@@ -6,4 +6,6 @@
     <dimen name="marginLeftTextView">100dp</dimen>
     <dimen name="marginTopLandUser">120dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="marginEditText">8dp</dimen>
+    <dimen name="marginButtonSignUp">4dp</dimen>
 </resources>
