@@ -25,10 +25,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/marginButtonSignUp"
-        android:text="REGISTRARSE"
-        android:id="@+id/signup"
+        android:text="INICIAR SESIÓN"
+        android:id="@+id/login"
         />
-
-
 
 </LinearLayout>

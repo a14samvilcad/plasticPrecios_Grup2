@@ -27,31 +27,12 @@
             android:background="@drawable/logobcn"
             />
 
-        <EditText
-            android:id="@+id/textUser"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="@dimen/marginTopUser"
-            android:hint="Usuario"
-            android:ems="10"
-            android:inputType="textLongMessage"
-
-            />
-
-        <EditText
-            android:id="@+id/textPassword"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:hint="Contraseña"
-
-            />
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="100dp"
             >
 
             <TableRow>

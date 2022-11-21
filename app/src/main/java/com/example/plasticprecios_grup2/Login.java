@@ -65,15 +65,15 @@ public class Login extends AppCompatActivity {
 
     private void handleLoginDialog(){
         //CREO QUE HAY QUE PONER OTRA LAYOUT
-        View view = getLayoutInflater().inflate(R.layout.activity_login, null);
+        View view = getLayoutInflater().inflate(R.layout.login_dialog, null);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
         builder.setView(view).show();
 
         Button loginBtn = view.findViewById(R.id.login);
-        EditText userEdit = view.findViewById(R.id.textUser);
-        EditText passwordEdit = view.findViewById(R.id.textPassword);
+        EditText userEdit = view.findViewById(R.id.nameEdit);
+        EditText passwordEdit = view.findViewById(R.id.passwordEdit);
 
         //On click LOGIN
         loginBtn.setOnClickListener(new View.OnClickListener() {
@@ -91,7 +91,7 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<LoginResult> call, Response<LoginResult> response) {
                         //probar isSuccesful == true si no va
-                        if (response.code() == 200){
+                        if (response.isSuccessful() == true){
 
                             LoginResult result = response.body();
 
@@ -102,7 +102,7 @@ public class Login extends AppCompatActivity {
                             builder1.show();
 
                         }
-                        else if (response.code() == 404){
+                        else if (response.isSuccessful() == false){
                             Toast.makeText(Login.this, "Credenciales equivocados",
                                     Toast.LENGTH_LONG).show();
                         }
@@ -148,15 +148,15 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<Void> call, Response<Void> response) {
 
-                        if (response.code() == 200){
+                        if (response.isSuccessful() == true){
                             Toast.makeText(Login.this,
                                     "Inicio de sesion correcto", Toast.LENGTH_LONG).show();
 
                             launchInicio(view);
                         }
-                        else if (response.code() == 400){
+                        else if (response.isSuccessful() == false){
                             Toast.makeText(Login.this,
-                                    "Registrado", Toast.LENGTH_LONG).show();
+                                    "Algo ha fallado", Toast.LENGTH_LONG).show();
                         }
 
 
