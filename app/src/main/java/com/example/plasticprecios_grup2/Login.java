@@ -29,7 +29,7 @@ public class Login extends AppCompatActivity {
 
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
-    private String BASE_URL = "";
+    private String BASE_URL = "http://192.168.18.18:3000";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -150,6 +150,8 @@ public class Login extends AppCompatActivity {
                         if (response.code() == 200){
                             Toast.makeText(Login.this,
                                     "Inicio de sesion correcto", Toast.LENGTH_LONG).show();
+
+                            launchInicio(view);
                         }
                         else if (response.code() == 400){
                             Toast.makeText(Login.this,
