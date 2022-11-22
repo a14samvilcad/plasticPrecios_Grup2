@@ -101,6 +101,10 @@ public class Login extends AppCompatActivity {
 
                             builder1.show();
 
+                            launchInicio(view);
+
+                            //alvher alvhercam5
+
                         }
                         else if (response.isSuccessful() == false){
                             Toast.makeText(Login.this, "Credenciales equivocados",
@@ -113,6 +117,8 @@ public class Login extends AppCompatActivity {
                     public void onFailure(Call<LoginResult> call, Throwable t) {
                         Toast.makeText(Login.this, t.getMessage(),
                                 Toast.LENGTH_LONG).show();
+
+                        //launchInicio(view);
                     }
                 });
 
@@ -138,7 +144,7 @@ public class Login extends AppCompatActivity {
 
                 HashMap<String, String> map = new HashMap<>();
 
-                map.put("name", nameEdit.getText().toString());
+                map.put("user", nameEdit.getText().toString());
                 map.put("password", passwordEdit.getText().toString());
 
 
