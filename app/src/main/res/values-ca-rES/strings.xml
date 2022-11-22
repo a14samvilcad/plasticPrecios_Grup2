@@ -16,4 +16,9 @@
     <string name="title_activity_home">activityHome</string>
     <string name="title_activity_inicio">Inici</string>
     <string name="title_activity_cesta">Cistell</string>
+    <string name="clicable_arrow"><![CDATA[>]]></string>
+    <string name="settings">Configuració</string>
+    <string name="item_list">Historial de comandes</string>
+    <string name="contact">Ajuda i Contacte</string>
+    <string name="exit">Sortir</string>
 </resources>

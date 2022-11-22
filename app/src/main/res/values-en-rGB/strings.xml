@@ -16,4 +16,9 @@
     <string name="title_activity_home">activityHome</string>
     <string name="title_activity_inicio">Start</string>
     <string name="title_activity_cesta">Basket</string>
+    <string name="clicable_arrow"><![CDATA[>]]></string>
+    <string name="settings">Settings</string>
+    <string name="item_list">Orders History</string>
+    <string name="contact">Help and Contact</string>
+    <string name="exit">Exit</string>
 </resources>

@@ -15,4 +15,10 @@
     <string name="title_activity_home">activityHome</string>
     <string name="title_activity_inicio">Inicio</string>
     <string name="title_activity_cesta">Cesta</string>
+    <string name="clicable_arrow"><![CDATA[>]]></string>
+    <string name="settings">Ajustes</string>
+    <string name="item_list">Historial de pedidos</string>
+    <string name="contact">Ayuda y Contacto</string>
+    <string name="exit">Salir</string>
+    <string name="userName" translatable="false">Pol Prats</string>
 </resources>
