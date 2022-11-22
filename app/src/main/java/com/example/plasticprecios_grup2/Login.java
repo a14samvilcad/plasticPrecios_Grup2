@@ -82,6 +82,9 @@ public class Login extends AppCompatActivity {
 
                 HashMap<String, String> map = new HashMap<>();
 
+                System.err.println(userEdit.getText().toString());
+                System.err.println(passwordEdit.getText().toString());
+
                 map.put("user", userEdit.getText().toString());
                 map.put("password", passwordEdit.getText().toString());
 
@@ -117,6 +120,8 @@ public class Login extends AppCompatActivity {
                     public void onFailure(Call<LoginResult> call, Throwable t) {
                         Toast.makeText(Login.this, t.getMessage(),
                                 Toast.LENGTH_LONG).show();
+
+                        t.printStackTrace();
 
                         //launchInicio(view);
                     }
