@@ -40,7 +40,6 @@
                     android:id="@+id/login"
                     android:layout_width="@dimen/width_button"
                     android:text="@string/enviarButton"
-
                     />
 
                 <Button
