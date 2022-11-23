@@ -110,9 +110,6 @@ public class Login extends AppCompatActivity {
                                     Toast.LENGTH_LONG).show();
 
                             launchInicio(view);
-
-                            //alvher alvhercam5
-
                         }
                         else if (response.code() == 400){
                             Toast.makeText(Login.this, "Credenciales equivocados",

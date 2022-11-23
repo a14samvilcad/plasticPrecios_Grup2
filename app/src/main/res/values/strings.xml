@@ -20,5 +20,5 @@
     <string name="item_list">Historial de pedidos</string>
     <string name="contact">Ayuda y Contacto</string>
     <string name="exit">Salir</string>
-    <string name="userName" translatable="false">Pol Prats</string>
+    <string name="userName" translatable="false">Nombre de usuario</string>
 </resources>
