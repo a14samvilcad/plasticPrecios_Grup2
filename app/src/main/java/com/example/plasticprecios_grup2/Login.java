@@ -82,8 +82,8 @@ public class Login extends AppCompatActivity {
 
                 HashMap<String, String> map = new HashMap<>();
 
-                System.err.println(userEdit.getText().toString());
-                System.err.println(passwordEdit.getText().toString());
+                //System.err.println(userEdit.getText().toString());
+                //System.err.println(passwordEdit.getText().toString());
 
                 map.put("user", userEdit.getText().toString());
                 map.put("password", passwordEdit.getText().toString());
@@ -93,23 +93,28 @@ public class Login extends AppCompatActivity {
                 call.enqueue(new Callback<LoginResult>() {
                     @Override
                     public void onResponse(Call<LoginResult> call, Response<LoginResult> response) {
+                        System.err.println(response.toString());
+
                         //probar isSuccesful == true si no va
-                        if (response.isSuccessful() == true){
+                        if (response.code() == 200){
 
                             LoginResult result = response.body();
 
                             AlertDialog.Builder builder1 = new AlertDialog.Builder(Login.this);
-                            builder1.setTitle(result.getUser());
-                            builder1.setMessage(result.getPassword());
+                            builder1.setTitle(userEdit.getText().toString());
+                            builder1.setMessage(passwordEdit.getText().toString());
 
                             builder1.show();
+
+                            Toast.makeText(Login.this, "Sesión iniciada",
+                                    Toast.LENGTH_LONG).show();
 
                             launchInicio(view);
 
                             //alvher alvhercam5
 
                         }
-                        else if (response.isSuccessful() == false){
+                        else if (response.code() == 400){
                             Toast.makeText(Login.this, "Credenciales equivocados",
                                     Toast.LENGTH_LONG).show();
                         }
@@ -123,7 +128,6 @@ public class Login extends AppCompatActivity {
 
                         t.printStackTrace();
 
-                        //launchInicio(view);
                     }
                 });
 
@@ -161,7 +165,7 @@ public class Login extends AppCompatActivity {
 
                         if (response.isSuccessful() == true){
                             Toast.makeText(Login.this,
-                                    "Inicio de sesion correcto", Toast.LENGTH_LONG).show();
+                                    "Registro correcto", Toast.LENGTH_LONG).show();
 
                             launchInicio(view);
                         }
