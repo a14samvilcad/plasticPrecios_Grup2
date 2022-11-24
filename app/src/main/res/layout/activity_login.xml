@@ -21,33 +21,30 @@
         <ImageView
             android:layout_width="150dp"
             android:layout_height="150dp"
-            android:layout_marginTop="50dp"
             android:layout_gravity="center"
+            android:layout_marginTop="50dp"
 
-            android:background="@drawable/logobcn"
-            />
+            android:background="@drawable/logobcn" />
 
 
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="100dp"
-            >
+            android:orientation="horizontal">
 
             <TableRow>
+
                 <Button
                     android:id="@+id/login"
                     android:layout_width="@dimen/width_button"
-                    android:text="@string/enviarButton"
-                    />
+                    android:text="@string/enviarButton" />
 
                 <Button
                     android:id="@+id/signup"
                     android:layout_width="@dimen/width_button"
                     android:layout_marginLeft="@dimen/marginBetweenButtons"
-                    android:text="@string/newUserButton"
-                    />
+                    android:text="@string/newUserButton" />
             </TableRow>
 
         </TableLayout>
@@ -55,17 +52,14 @@
         <ImageView
             android:layout_width="126dp"
             android:layout_height="115dp"
-            android:background="@drawable/reciclar"
-            android:layout_marginTop="50dp"
             android:layout_gravity="center"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/reciclar"
 
             />
 
 
-
-
     </LinearLayout>
-
 
 
 </RelativeLayout>
