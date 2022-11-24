@@ -48,4 +48,9 @@ public class inicio extends AppCompatActivity {
     public void cestaClick(View view) {
 
     }
+
+    public void goProfile(View view) {
+        Intent intent = new Intent(this, Profile.class);
+        startActivityForResult(intent, TEXT_REQUEST);
+    }
 }

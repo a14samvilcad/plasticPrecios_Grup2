@@ -22,7 +22,7 @@
                 android:id="@+id/fotoUser"
                 android:layout_width="60dp"
                 android:layout_height="match_parent"
-
+                android:onClick="goProfile"
                 android:background="@drawable/avatar"
 
                 />
