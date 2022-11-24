@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -74,6 +75,9 @@ public class Login extends AppCompatActivity {
         Button loginBtn = view.findViewById(R.id.login);
         EditText userEdit = view.findViewById(R.id.nameEdit);
         EditText passwordEdit = view.findViewById(R.id.passwordEdit);
+
+        RadioButton adminRB = view.findViewById(R.id.radio_admin);
+        RadioButton userRB = view.findViewById(R.id.radio_user);
 
         //On click LOGIN
         loginBtn.setOnClickListener(new View.OnClickListener() {
