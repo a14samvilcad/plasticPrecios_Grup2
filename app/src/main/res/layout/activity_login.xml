@@ -53,6 +53,33 @@
 
         </TableLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:text="Created by"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="POL PUIG    ALVARO HERNÁNDEZ"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:text="SAMUEL VILCHES    FERNANDO ORTIZ"
+            />
+
+
         <ImageView
             android:layout_width="126dp"
             android:layout_height="115dp"
