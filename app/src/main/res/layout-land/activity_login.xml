@@ -64,12 +64,12 @@
             <TableRow>
                 <Button
                     android:id="@+id/login"
-                    android:layout_width="@dimen/width_button"
+                    style="@style/Theme.ButtonConfLands"
                     android:text="@string/enviarButton" />
 
                 <Button
                     android:id="@+id/signup"
-                    android:layout_width="@dimen/width_button"
+                    style="@style/Theme.ButtonConfLands"
                     android:layout_marginLeft="@dimen/marginBetweenButtons"
                     android:text="@string/newUserButton" />
             </TableRow>
