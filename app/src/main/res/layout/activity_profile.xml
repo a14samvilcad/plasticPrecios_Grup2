@@ -35,7 +35,8 @@
             android:textColor="@color/black"/>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="380dp"
+            android:layout_gravity="center"
             android:layout_height="60dp"
             android:layout_marginTop="70dp"
             android:orientation="horizontal">
@@ -47,28 +48,18 @@
                 android:background="@drawable/configuration_customize_setting_setup_tool_icon_1320086045624971998" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="25dp"
-                android:background="@android:color/transparent"
-                android:text="@string/settings"
-                android:textColor="@color/black" />
+                style="@style/Theme.ButtonProfile"
+                android:text="@string/settings"/>
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="116dp"
-                android:background="@android:color/transparent"
-                android:text="@string/clicable_arrow"
-                android:textColor="@color/black"
-                android:textSize="@dimen/clicable_arrow" />
+                style="@style/Theme.ButtonArrow"
+                android:text="@string/clicable_arrow"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="380dp"
+            android:layout_gravity="center"
             android:layout_height="60dp"
             android:layout_marginTop="15dp"
             android:orientation="horizontal">
@@ -80,28 +71,18 @@
                 android:background="@drawable/_341764" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="25dp"
-                android:background="@android:color/transparent"
-                android:text="@string/item_list"
-                android:textColor="@color/black" />
+                style="@style/Theme.ButtonProfile"
+                android:text="@string/item_list" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="16dp"
-                android:background="@android:color/transparent"
-                android:text="@string/clicable_arrow"
-                android:textColor="@color/black"
-                android:textSize="@dimen/clicable_arrow" />
+                style="@style/Theme.ButtonArrow"
+                android:text="@string/clicable_arrow"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="380dp"
+            android:layout_gravity="center"
             android:layout_height="60dp"
             android:layout_marginTop="15dp"
             android:orientation="horizontal">
@@ -113,28 +94,18 @@
                 android:background="@drawable/minimalist_info_icon" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="25dp"
-                android:background="@android:color/transparent"
-                android:text="@string/contact"
-                android:textColor="@color/black" />
+                style="@style/Theme.ButtonProfile"
+                android:text="@string/contact"/>
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="36dp"
-                android:background="@android:color/transparent"
-                android:text="@string/clicable_arrow"
-                android:textColor="@color/black"
-                android:textSize="@dimen/clicable_arrow" />
+                style="@style/Theme.ButtonArrow"
+                android:text="@string/clicable_arrow"/>
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="380dp"
+            android:layout_gravity="center"
             android:layout_height="60dp"
             android:layout_marginTop="70dp"
             android:onClick="goLogin"
@@ -147,23 +118,12 @@
                 android:background="@drawable/_617409" />
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="25dp"
-                android:background="@android:color/transparent"
-                android:text="@string/exit"
-                android:textColor="@color/black" />
+                style="@style/Theme.ButtonProfile"
+                android:text="@string/exit"/>
 
             <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginLeft="139dp"
-                android:background="@android:color/transparent"
-                android:text="@string/clicable_arrow"
-                android:textColor="@color/black"
-                android:textSize="@dimen/clicable_arrow" />
+                style="@style/Theme.ButtonArrow"
+                android:text="@string/clicable_arrow"/>
 
         </LinearLayout>
     </LinearLayout>

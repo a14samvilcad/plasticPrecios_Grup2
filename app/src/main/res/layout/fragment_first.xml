@@ -75,14 +75,8 @@
 
                         <Button
                             android:id="@+id/buttonFirst"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="60dp"
-                            android:backgroundTint="@color/black"
-                            android:text="+"
-                            android:textColor="@color/white"
-                            android:textSize="20sp"
-                            />
+                            style="@style/Theme.ButtonConfFirstFrag"
+                            android:text="+"/>
 
                     </LinearLayout>
 
@@ -91,7 +85,7 @@
             </androidx.cardview.widget.CardView>
 
 
-            //Está cardview se eliminara en cuanto saquemos los productos de la BBDD
+            <!-- Está cardview se eliminara en cuanto saquemos los productos de la BBDD-->
             <androidx.cardview.widget.CardView
                 android:layout_width="250dp"
                 android:layout_height="350dp"
@@ -137,13 +131,8 @@
                             android:textSize="20sp" />
 
                         <Button
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="60dp"
-                            android:backgroundTint="@color/black"
                             android:text="+"
-                            android:textColor="@color/white"
-                            android:textSize="20sp" />
+                            style="@style/Theme.ButtonConfFirstFrag" />
 
                     </LinearLayout>
 
@@ -156,7 +145,7 @@
     </HorizontalScrollView>
 
 
-    //POPULAR THINGS
+    <!-- POPULAR THINGS -->
 
     <TextView
         android:layout_width="wrap_content"
