@@ -21,4 +21,7 @@
     <string name="contact">Ayuda y Contacto</string>
     <string name="exit">Salir</string>
     <string name="userName" translatable="false">Nombre de usuario</string>
+    <string name="admin">Administrador</string>
+    <string name="user">Usuario</string>
+    <string name="creator">Creador</string>
 </resources>
