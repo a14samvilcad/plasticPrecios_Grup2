@@ -18,6 +18,10 @@ public class Profile extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
 
+        Intent intent = getIntent();
+        String userNameText = intent.getStringExtra(inicio.EXTRA_MESSAGE);
+        TextView textViewUserName = findViewById(R.id.textViewUser);
+        textViewUserName.setText(userNameText);
     }
 
     public void goLogin(View view) {
@@ -25,8 +29,5 @@ public class Profile extends AppCompatActivity {
         startActivityForResult(intent, TEXT_REQUEST);
     }
 
-    public void setUserName(String userName){
-        //String s = getString(R.string.userName);
-        //R.string.userName
-    }
+
 }

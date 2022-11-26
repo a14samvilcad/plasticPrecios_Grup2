@@ -26,10 +26,13 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Login extends AppCompatActivity {
 
     private static final int TEXT_REQUEST = 1;
+    public static final String EXTRA_MESSAGE = "com.example.android.examen1vilsam.extra.MESSAGE";
 
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
     private String BASE_URL = "http://192.168.1.14:3000";
+
+    private EditText usernameEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +69,8 @@ public class Login extends AppCompatActivity {
     private void handleLoginDialog(){
         //CREO QUE HAY QUE PONER OTRA LAYOUT
         View view = getLayoutInflater().inflate(R.layout.login_dialog, null);
+        //Recibimiento user
+        usernameEditText = view.findViewById(R.id.nameEdit);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
@@ -135,6 +140,8 @@ public class Login extends AppCompatActivity {
     private void handleSignupDialog() {
 
         View view = getLayoutInflater().inflate(R.layout.signup_dialog, null);
+        //Recibimiento user
+        usernameEditText = view.findViewById(R.id.nameEdit);
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setView(view).show();
@@ -190,7 +197,12 @@ public class Login extends AppCompatActivity {
     public void launchInicio(View view) {
 
         Intent intent = new Intent(this, inicio.class);
+        String userNameText = usernameEditText.getText().toString();
+        intent.putExtra(EXTRA_MESSAGE, userNameText);
+
         startActivityForResult(intent, TEXT_REQUEST);
+
+
 
     }
 

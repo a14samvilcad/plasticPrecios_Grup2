@@ -8,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
+import android.widget.TextView;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -18,9 +19,11 @@ import com.example.plasticprecios_grup2.databinding.ActivityInicioBinding;
 
 public class inicio extends AppCompatActivity {
 
+    public static final String EXTRA_MESSAGE = "com.example.android.examen1vilsam.extra.MESSAGE";
     private static final int TEXT_REQUEST = 1;
     private AppBarConfiguration appBarConfiguration;
     private ActivityInicioBinding binding;
+    private String userNameText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,9 @@ public class inicio extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_inicio);
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
+        Intent intent = getIntent();
+        userNameText = intent.getStringExtra(Login.EXTRA_MESSAGE);
 
 
     }
@@ -51,6 +57,8 @@ public class inicio extends AppCompatActivity {
 
     public void goProfile(View view) {
         Intent intent = new Intent(this, Profile.class);
+        intent.putExtra(EXTRA_MESSAGE, userNameText);
+
         startActivityForResult(intent, TEXT_REQUEST);
     }
 }

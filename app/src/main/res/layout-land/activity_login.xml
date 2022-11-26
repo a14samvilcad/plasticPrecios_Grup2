@@ -21,30 +21,10 @@
         <ImageView
             android:layout_width="95dp"
             android:layout_height="95dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
 
             android:background="@drawable/logobcn" />
-
-        <TableLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="40dp">
-
-            <TableRow>
-                <Button
-                    android:id="@+id/login"
-                    android:layout_width="@dimen/width_button"
-                    android:text="@string/enviarButton" />
-
-                <Button
-                    android:id="@+id/signup"
-                    android:layout_width="@dimen/width_button"
-                    android:layout_marginLeft="@dimen/marginBetweenButtons"
-                    android:text="@string/newUserButton" />
-            </TableRow>
-        </TableLayout>
 
         <TextView
             android:layout_width="wrap_content"
@@ -75,14 +55,27 @@
             android:textColor="@color/black"
             />
 
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/reciclar"
+            android:layout_marginTop="10dp">
 
-            />
+            <TableRow>
+                <Button
+                    android:id="@+id/login"
+                    android:layout_width="@dimen/width_button"
+                    android:text="@string/enviarButton" />
+
+                <Button
+                    android:id="@+id/signup"
+                    android:layout_width="@dimen/width_button"
+                    android:layout_marginLeft="@dimen/marginBetweenButtons"
+                    android:text="@string/newUserButton" />
+            </TableRow>
+        </TableLayout>
+
+
 
 
     </LinearLayout>
