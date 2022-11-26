@@ -21,4 +21,7 @@
     <string name="item_list">Orders History</string>
     <string name="contact">Help and Contact</string>
     <string name="exit">Exit</string>
+    <string name="admin">Admin</string>
+    <string name="user">User</string>
+    <string name="creator">Creator</string>
 </resources>

@@ -21,4 +21,7 @@
     <string name="item_list">Historial de comandes</string>
     <string name="contact">Ajuda i Contacte</string>
     <string name="exit">Sortir</string>
+    <string name="admin">Administrador</string>
+    <string name="user">Usuari</string>
+    <string name="creator">Creador</string>
 </resources>
