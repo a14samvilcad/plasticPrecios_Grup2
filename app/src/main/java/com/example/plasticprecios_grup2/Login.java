@@ -29,7 +29,7 @@ public class Login extends AppCompatActivity {
 
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
-    private String BASE_URL = "http://192.168.18.18:3000";
+    private String BASE_URL = "http://192.168.1.14:3000";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,9 +82,6 @@ public class Login extends AppCompatActivity {
 
                 HashMap<String, String> map = new HashMap<>();
 
-                //System.err.println(userEdit.getText().toString());
-                //System.err.println(passwordEdit.getText().toString());
-
                 map.put("user", userEdit.getText().toString());
                 map.put("password", passwordEdit.getText().toString());
 
@@ -100,11 +97,13 @@ public class Login extends AppCompatActivity {
 
                             LoginResult result = response.body();
 
-                            AlertDialog.Builder builder1 = new AlertDialog.Builder(Login.this);
-                            builder1.setTitle(userEdit.getText().toString());
-                            builder1.setMessage(passwordEdit.getText().toString());
+                            //AlertDialog.Builder builder1 = new AlertDialog.Builder(Login.this);
+                            //builder1.setTitle(userEdit.getText().toString());
+                            //builder1.setMessage(passwordEdit.getText().toString());
 
-                            builder1.show();
+                            //builder1.show();
+
+
 
                             Toast.makeText(Login.this, "Sesión iniciada",
                                     Toast.LENGTH_LONG).show();
