@@ -166,6 +166,7 @@ public class Login extends AppCompatActivity {
                         dateTxt.setText(date + "-" + month + "-" + year);
                     }
                 }, mYear, mMonth, mDate);
+                datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis()-1000);
                 datePickerDialog.show();
             }
         });
