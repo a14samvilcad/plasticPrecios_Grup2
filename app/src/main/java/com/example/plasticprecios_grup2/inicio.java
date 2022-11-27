@@ -21,9 +21,17 @@ public class inicio extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.android.examen1vilsam.extra.MESSAGE";
     private static final int TEXT_REQUEST = 1;
+
+    //Toolbar
     private AppBarConfiguration appBarConfiguration;
+
+    //Binding for fragments
     private ActivityInicioBinding binding;
+
+    //UserName
     private String userNameText;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,9 +59,16 @@ public class inicio extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
+    //falta por implementar la cesta
     public void cestaClick(View view) {
 
     }
+
+    //
+    public void searchProducts(View view){
+        new FetchProduct().execute();
+    }
+
 
     public void goProfile(View view) {
         Intent intent = new Intent(this, Profile.class);
