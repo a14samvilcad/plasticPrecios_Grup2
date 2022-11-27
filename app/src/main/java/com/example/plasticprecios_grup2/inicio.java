@@ -66,6 +66,8 @@ public class inicio extends AppCompatActivity {
 
     //
     public void searchProducts(View view){
+
+
         new FetchProduct().execute();
     }
 

@@ -1,6 +1,7 @@
 package com.example.plasticprecios_grup2;
 
 import android.net.Uri;
+import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -38,14 +39,41 @@ public class NetworkUtils {
             reader = new BufferedReader(new InputStreamReader(inputStream));
             StringBuilder builder = new StringBuilder();
 
+            String line;
+            while ((line = reader.readLine()) != null){
+                builder.append(line);
+
+                builder.append("\n");
+            }
+
+            if (builder.length() == 0){
+                // Stream was empty. No point in parsing.
+                return null;
+            }
+
+            productJSONString = builder.toString();
+
 
         }catch (Exception e){
             e.printStackTrace();
         }finally {
-
+            if (urlConnection != null) {
+                urlConnection.disconnect();
+            }
+            if (reader != null) {
+                try {
+                    reader.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
 
+
+        Log.d(LOG_TAG, productJSONString);
+
         return productJSONString;
+
     }
 
 }
