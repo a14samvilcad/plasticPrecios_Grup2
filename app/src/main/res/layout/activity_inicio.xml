@@ -15,7 +15,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="@drawable/fondo"
+            android:background="@drawable/backgroundapp"
             app:popupTheme="@style/Theme.PlasticPrecios_Grup2.PopupOverlay">
 
             <ImageView
