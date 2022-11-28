@@ -1,5 +1,7 @@
 package com.example.plasticprecios_grup2;
 
+import static com.example.plasticprecios_grup2.inicio.getProductsArrayList;
+
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -22,7 +24,6 @@ public class FirstFragment extends Fragment {
     private FragmentFirstBinding binding;
 
     private ArrayList<Products> productsArrayList;
-    private RecyclerView recycler;
 
 
     @Override
@@ -31,7 +32,7 @@ public class FirstFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-
+        productsArrayList = getProductsArrayList();
         binding = FragmentFirstBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
@@ -41,20 +42,13 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        recycler = (RecyclerView) view.findViewById(R.id.recyclerId);
-        recycler.setLayoutManager(new LinearLayoutManager(this.getContext(),
-                LinearLayoutManager.VERTICAL,
-                false));
-        productsArrayList = inicio.getProductsArrayList();
-
-        ArrayList<String> listDatos = new ArrayList<>();
+        ArrayList<String> listNombres = new ArrayList<>();
 
         for (Products product: productsArrayList){
-            listDatos.add(product.getNombre());
+            listNombres.add(product.getNombre());
         }
 
-        AdapterDatos adapter = new AdapterDatos(listDatos);
-        recycler.setAdapter(adapter);
+
 
 
         binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
