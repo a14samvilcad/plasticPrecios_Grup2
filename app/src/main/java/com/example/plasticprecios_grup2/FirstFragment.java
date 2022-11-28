@@ -43,6 +43,7 @@ public class FirstFragment extends Fragment {
     ) {
 
         getProducts();
+
         binding = FragmentFirstBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
@@ -145,9 +146,6 @@ public class FirstFragment extends Fragment {
 
     }
 
-    public static ArrayList<Products> getProductsArrayList(){
-        return productsArrayList;
-    }
 
 
 }
