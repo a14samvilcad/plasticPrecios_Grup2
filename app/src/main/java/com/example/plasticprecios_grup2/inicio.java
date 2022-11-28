@@ -31,11 +31,7 @@ public class inicio extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.android.examen1vilsam.extra.MESSAGE";
     private static final int TEXT_REQUEST = 1;
-    private String BASE_URL = "http://192.168.1.14:3000";
-    private static ArrayList<Products> productsArrayList = new ArrayList<>();
 
-    private Retrofit retrofit;
-    private RetrofitInterface retrofitInterface;
 
     //Toolbar
     private AppBarConfiguration appBarConfiguration;
@@ -64,7 +60,7 @@ public class inicio extends AppCompatActivity {
         Intent intent = getIntent();
         userNameText = intent.getStringExtra(Login.EXTRA_MESSAGE);
 
-        getProducts();
+
 
     }
 
@@ -76,66 +72,7 @@ public class inicio extends AppCompatActivity {
     }
 
 
-    //Metodo para coger los productos del metodo del node
-    private void getProducts(){
 
-        retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
-
-        retrofitInterface = retrofit.create(RetrofitInterface.class);
-
-        Call<List<Products>> call = retrofitInterface.getProducts();
-
-        call.enqueue(new Callback<List<Products>>() {
-            @Override
-            public void onResponse(Call<List<Products>> call, Response<List<Products>> response) {
-                //Controla errores de respuesta HTTP
-                if (!response.isSuccessful()){
-
-                    Toast.makeText(inicio.this, "Codigo HTTP" + response.code(),
-                            Toast.LENGTH_LONG).show();
-                    System.err.println("Codigo HTTP: " + response.code());
-                    return;
-                }
-
-                List<Products> productsList = response.body();
-
-                for (Products products: productsList){
-
-                    String userName = products.getUserName();
-                    int preu = products.getPrecio();
-                    String nombre = products.getNombre();
-                    String desc = products.getDescripcion();
-
-                    productsArrayList = new ArrayList<>();
-                    Products newProduct = new Products(userName, preu, nombre, desc);
-                    productsArrayList.add(newProduct);
-
-
-                    Toast.makeText(inicio.this, newProduct.toString(), Toast.LENGTH_LONG).show();
-                }
-
-
-
-            }
-
-            @Override
-            public void onFailure(Call<List<Products>> call, Throwable t) {
-
-                Toast.makeText(inicio.this, t.getMessage(),
-                        Toast.LENGTH_LONG).show();
-
-                t.printStackTrace();
-            }
-        });
-
-    }
-
-    public static ArrayList<Products> getProductsArrayList(){
-        return productsArrayList;
-    }
 
 
 
