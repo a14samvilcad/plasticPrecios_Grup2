@@ -25,4 +25,6 @@
     <string name="user">Usuari</string>
     <string name="creator">Creador</string>
     <string name="dateTxt">dia-mes-any</string>
+    <string name="stringProductos">Productes</string>
+    <string name="stringPopular">Popular</string>
 </resources>

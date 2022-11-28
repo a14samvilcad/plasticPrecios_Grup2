@@ -10,6 +10,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.plasticprecios_grup2.databinding.FragmentFirstBinding;
 
@@ -20,15 +22,15 @@ public class FirstFragment extends Fragment {
     private FragmentFirstBinding binding;
 
     private ArrayList<Products> productsArrayList;
+    private ArrayList<String> listDatos;
+    private RecyclerView recycler;
 
-    private TextView titleTextView;
 
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
-        productsArrayList = inicio.getProductsArrayList();
 
 
         binding = FragmentFirstBinding.inflate(inflater, container, false);
@@ -40,11 +42,21 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        titleTextView = view.findViewById(R.id.tituloProducto);
+        recycler = (RecyclerView) view.findViewById(R.id.recyclerId);
+        recycler.setLayoutManager(new LinearLayoutManager(this.getContext(),
+                LinearLayoutManager.VERTICAL,
+                false));
+        productsArrayList = inicio.getProductsArrayList();
+
+        listDatos = new ArrayList<String>();
+
         for (Products product: productsArrayList){
-            titleTextView.setText(product.getNombre());
+            System.out.println(product.getNombre());
+            listDatos.add(product.getNombre());
         }
 
+        AdapterDatos adapter = new AdapterDatos(listDatos);
+        recycler.setAdapter(adapter);
 
 
         binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
@@ -55,13 +67,14 @@ public class FirstFragment extends Fragment {
             }
         });
 
+        /*
         binding.popularProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(FirstFragment.this)
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
             }
-        });
+        });*/
     }
 
     @Override
