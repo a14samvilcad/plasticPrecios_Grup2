@@ -31,6 +31,7 @@ public class Login extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.android.examen1vilsam.extra.MESSAGE";
     private static final int TEXT_REQUEST = 1;
+
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
     private String BASE_URL = "http://192.168.1.14:3000";
@@ -102,15 +103,6 @@ public class Login extends AppCompatActivity {
 
                         //probar isSuccesful == true si no va
                         if (response.code() == 200) {
-
-                            LoginResult result = response.body();
-
-                            //AlertDialog.Builder builder1 = new AlertDialog.Builder(Login.this);
-                            //builder1.setTitle(userEdit.getText().toString());
-                            //builder1.setMessage(passwordEdit.getText().toString());
-
-                            //builder1.show();
-
 
                             Toast.makeText(Login.this, "Sesión iniciada",
                                     Toast.LENGTH_LONG).show();

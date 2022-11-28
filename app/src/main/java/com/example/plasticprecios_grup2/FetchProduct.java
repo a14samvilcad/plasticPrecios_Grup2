@@ -25,7 +25,7 @@ public class FetchProduct extends AsyncTask<String, Void, String> {
             JSONObject jsonObject = new JSONObject(s);
             JSONArray itemsArray = jsonObject.getJSONArray("items"); //no se que hay que poner aqui
 
-
+            int i = 0;
 
 
 
