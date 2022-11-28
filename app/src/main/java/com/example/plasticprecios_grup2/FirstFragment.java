@@ -22,7 +22,6 @@ public class FirstFragment extends Fragment {
     private FragmentFirstBinding binding;
 
     private ArrayList<Products> productsArrayList;
-    private ArrayList<String> listDatos;
     private RecyclerView recycler;
 
 
@@ -48,10 +47,9 @@ public class FirstFragment extends Fragment {
                 false));
         productsArrayList = inicio.getProductsArrayList();
 
-        listDatos = new ArrayList<String>();
+        ArrayList<String> listDatos = new ArrayList<>();
 
         for (Products product: productsArrayList){
-            System.out.println(product.getNombre());
             listDatos.add(product.getNombre());
         }
 
