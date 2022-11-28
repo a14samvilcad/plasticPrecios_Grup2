@@ -114,8 +114,7 @@ public class inicio extends AppCompatActivity {
                     productsArrayList.add(newProduct);
 
 
-                    Toast.makeText(inicio.this, newProduct.toString(),
-                            Toast.LENGTH_LONG).show();
+                    Toast.makeText(inicio.this, newProduct.toString(), Toast.LENGTH_LONG).show();
                 }
 
 

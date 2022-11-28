@@ -32,7 +32,6 @@ public class FirstFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        productsArrayList = getProductsArrayList();
         binding = FragmentFirstBinding.inflate(inflater, container, false);
         return binding.getRoot();
 
@@ -41,12 +40,15 @@ public class FirstFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        productsArrayList = getProductsArrayList();
 
         ArrayList<String> listNombres = new ArrayList<>();
 
         for (Products product: productsArrayList){
             listNombres.add(product.getNombre());
+            Toast.makeText(getActivity(), product.toString(), Toast.LENGTH_LONG).show();
         }
+
 
 
 
@@ -66,7 +68,6 @@ public class FirstFragment extends Fragment {
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
             }
         });
-
 
         binding.popularProduct.setOnClickListener(new View.OnClickListener() {
             @Override
