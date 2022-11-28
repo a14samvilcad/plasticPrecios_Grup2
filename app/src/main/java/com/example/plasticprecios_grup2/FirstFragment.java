@@ -40,6 +40,12 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        titleTextView = view.findViewById(R.id.tituloProducto);
+        for (Products product: productsArrayList){
+            titleTextView.setText(product.getNombre());
+        }
+
+
 
         binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
             @Override
