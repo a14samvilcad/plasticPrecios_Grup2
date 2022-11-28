@@ -34,7 +34,7 @@ public class Login extends AppCompatActivity {
 
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
-    private String BASE_URL = "http://192.168.1.14:3000";
+    private String BASE_URL = "http://192.168.164.117:3000";
 
     private EditText usernameEditText;
 

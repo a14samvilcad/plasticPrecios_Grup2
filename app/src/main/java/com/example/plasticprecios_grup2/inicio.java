@@ -31,7 +31,7 @@ public class inicio extends AppCompatActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.android.examen1vilsam.extra.MESSAGE";
     private static final int TEXT_REQUEST = 1;
-    private String BASE_URL = "http://192.168.1.14:3000";
+    private String BASE_URL = "http://192.168.164.117:3000";
     private static ArrayList<Products> productsArrayList = new ArrayList<>();
 
     private Retrofit retrofit;
