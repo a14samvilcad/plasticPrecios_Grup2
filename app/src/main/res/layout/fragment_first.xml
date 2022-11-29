@@ -18,7 +18,7 @@
         android:layout_marginLeft="20dp"
         android:layout_gravity="left"
 
-        android:text="@string/stringProductos"
+        android:text="@string/stringPopular"
         />
 
 
@@ -156,7 +156,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginLeft="20dp"
 
-        android:text="Popular"
+        android:text="@string/stringProductos"
         />
 
     <androidx.recyclerview.widget.RecyclerView
