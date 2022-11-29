@@ -61,7 +61,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         UiSettings uiSettings = mMap.getUiSettings();
 
         // Add a marker in Sydney and move the camera
-        LatLng bcn = new LatLng(-23.560184, -70.400932);
+        LatLng bcn = new LatLng(41.3879, 2.16992);
         mMap.addMarker(new MarkerOptions().position(bcn).title("Estoy aqui").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(bcn));
 
