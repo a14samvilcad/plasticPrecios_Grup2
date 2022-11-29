@@ -27,6 +27,7 @@
             android:id="@+id/date"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/marginEditText"
             android:hint="@string/dateTxt"
             android:textSize="24dp"
 
@@ -34,11 +35,19 @@
 
         <ImageView
             android:id="@+id/datepicker"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_toRightOf="@id/date"
             android:src="@drawable/calendar" />
     </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="@string/stringRol"
+        />
 
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
@@ -49,18 +58,21 @@
             android:id="@+id/radio_admin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:text="@string/admin" />
 
         <RadioButton
             android:id="@+id/radio_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:text="@string/user" />
 
         <RadioButton
             android:id="@+id/radio_creator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:text="@string/creator" />
     </RadioGroup>
 

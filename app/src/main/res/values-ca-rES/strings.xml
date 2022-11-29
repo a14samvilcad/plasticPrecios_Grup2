@@ -24,8 +24,9 @@
     <string name="admin">Administrador</string>
     <string name="user">Usuari</string>
     <string name="creator">Creador</string>
-    <string name="dateTxt">dia-mes-any</string>
+    <string name="dateTxt">Data de naixement</string>
     <string name="stringProductos">Productes</string>
     <string name="stringPopular">Popular</string>
     <string name="ubicacion">On estem?</string>
+    <string name="stringRol">Rol</string>
 </resources>
