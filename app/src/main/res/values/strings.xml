@@ -27,4 +27,6 @@
     <string name="dateTxt">dia-mes-año</string>
     <string name="stringProductos">Productos</string>
     <string name="stringPopular">Popular</string>
+    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="ubicacion">Donde estamos</string>
 </resources>

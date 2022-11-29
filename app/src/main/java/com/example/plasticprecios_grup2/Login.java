@@ -144,6 +144,14 @@ public class Login extends AppCompatActivity {
         EditText passwordEdit = view.findViewById(R.id.passwordEdit);
         EditText dateTxt = view.findViewById(R.id.date);
         ImageView cal = view.findViewById(R.id.datepicker);
+        Button mapa = view.findViewById(R.id.mapa);
+        mapa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Login.this, MapsActivity.class);
+                startActivity(intent);
+            }
+        });
 
         cal.setOnClickListener(new View.OnClickListener() {
             @Override

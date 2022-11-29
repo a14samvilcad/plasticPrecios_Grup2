@@ -38,6 +38,14 @@
             android:layout_height="50dp"
             android:layout_toRightOf="@id/date"
             android:src="@drawable/calendar" />
+
+        <Button
+            android:id="@+id/mapa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="Donde estoy"
+            android:layout_toRightOf="@id/datepicker"/>
     </RelativeLayout>
 
     <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
