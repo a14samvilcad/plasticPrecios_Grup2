@@ -58,7 +58,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         void bindData(final Products item){
             name.setText(item.getNombre());
             desc.setText(item.getDescripcion());
-            userName.setText(item.getUserName());
+            userName.setText("By: " + item.getUserName());
             preu.setText(item.getPrecio() + "€");
         }
     }

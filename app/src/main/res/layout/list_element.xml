@@ -7,7 +7,8 @@
     android:animateLayoutChanges="true"
     app:cardBackgroundColor="@color/white"
     app:cardCornerRadius="20dp"
-    app:cardElevation="4dp">
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
 
     <!-- POPULAR THINGS -->
 
@@ -53,6 +54,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:text="Plasticos reciclados en el Himalaya."
+                    android:layout_marginTop="10dp"
                     />
 
             </LinearLayout>
@@ -65,7 +67,10 @@
                 android:textColor="@color/black"
                 android:textStyle="bold"
                 android:textSize="20sp"
-                android:layout_gravity="center_vertical" />
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="6dp"
+                android:layout_marginRight="6dp"
+                />
 
         </TableRow>
 
