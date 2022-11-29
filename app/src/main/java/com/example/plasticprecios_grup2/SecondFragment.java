@@ -22,7 +22,7 @@ public class SecondFragment extends Fragment {
 
     //Variables para ImageSwitcher
     int index = 0;
-    int galeria[] = {R.drawable.avatar, R.drawable.libreta, R.drawable.llavero};
+    int galeria[] = {R.drawable.llavero, R.drawable.monito};
 
     //Variables para el numero de productos (augmentar-disminuir)
     private int contNumProductes = 1;

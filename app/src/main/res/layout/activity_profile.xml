@@ -120,7 +120,7 @@
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="35dp"
-                android:background="@drawable/minimalist_info_icon" />
+                android:background="@drawable/maps" />
 
             <Button
                 android:id="@+id/mapa"
