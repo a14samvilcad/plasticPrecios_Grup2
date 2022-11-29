@@ -142,8 +142,7 @@ public class FirstFragment extends Fragment {
 
                 //Comprobacion de que se meten en el ArrayList
                 for (Products products: productsArrayList){
-                    Toast.makeText(getActivity(), products.toString(),
-                            Toast.LENGTH_LONG).show();
+                    //Toast.makeText(getActivity(), products.toString(), Toast.LENGTH_LONG).show();
                 }
 
 
