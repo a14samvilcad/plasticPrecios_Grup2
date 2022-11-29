@@ -30,7 +30,7 @@ public class FirstFragment extends Fragment {
     private FragmentFirstBinding binding;
 
     private String BASE_URL = "http://192.168.1.14:3000";
-    private static ArrayList<Products> productsArrayList = new ArrayList<>();
+    ArrayList<Products> productsArrayList = new ArrayList<>();
 
     private Retrofit retrofit;
     private RetrofitInterface retrofitInterface;
@@ -42,9 +42,10 @@ public class FirstFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        getProducts();
-
         binding = FragmentFirstBinding.inflate(inflater, container, false);
+
+
+
         return binding.getRoot();
 
     }
@@ -53,7 +54,10 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        getProducts();
 
+        //Llamada al metodo init para meter los valores en la RecyclerView
+        init(getView());
 
 
 
@@ -73,13 +77,14 @@ public class FirstFragment extends Fragment {
             }
         });
 
+        /*
         binding.popularProduct.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(FirstFragment.this)
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
             }
-        });
+        });*/
     }
 
     @Override
@@ -87,6 +92,15 @@ public class FirstFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
+
+    public void init(View view){
+        ListAdapter listAdapter = new ListAdapter(productsArrayList, getContext());
+        RecyclerView recyclerView = view.findViewById(R.id.listRecyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(listAdapter);
+    }
+
 
     //Metodo para coger los productos del metodo del node
     private void getProducts(){
@@ -121,15 +135,16 @@ public class FirstFragment extends Fragment {
                     String nombre = products.getNombre();
                     String desc = products.getDescripcion();
 
-                    productsArrayList = new ArrayList<>();
                     Products newProduct = new Products(userName, preu, nombre, desc);
                     productsArrayList.add(newProduct);
 
-
-                    Toast.makeText(getActivity(), newProduct.toString(),
-                            Toast.LENGTH_LONG).show();
                 }
 
+                //Comprobacion de que se meten en el ArrayList
+                for (Products products: productsArrayList){
+                    Toast.makeText(getActivity(), products.toString(),
+                            Toast.LENGTH_LONG).show();
+                }
 
 
             }

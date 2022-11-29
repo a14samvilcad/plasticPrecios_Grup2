@@ -2,12 +2,10 @@ package com.example.plasticprecios_grup2;
 
 public class Products {
 
-    private String userName;
-    private int stock;
-    private int precio;
-    private int valoracio;
-    private String nombre;
-    private String descripcion;
+    public String userName;
+    public int precio;
+    public String nombre;
+    public String descripcion;
 
     @Override
     public String toString() {
@@ -31,16 +29,8 @@ public class Products {
         return userName;
     }
 
-    public int getStock() {
-        return stock;
-    }
-
     public int getPrecio() {
         return precio;
-    }
-
-    public int getValoracio() {
-        return valoracio;
     }
 
     public String getNombre() {
@@ -55,16 +45,8 @@ public class Products {
         this.userName = userName;
     }
 
-    public void setStock(int stock) {
-        this.stock = stock;
-    }
-
     public void setPrecio(int precio) {
         this.precio = precio;
-    }
-
-    public void setValoracio(int valoracio) {
-        this.valoracio = valoracio;
     }
 
     public void setNombre(String nombre) {

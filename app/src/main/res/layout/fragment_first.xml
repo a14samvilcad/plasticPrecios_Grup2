@@ -22,8 +22,6 @@
         />
 
 
-    <!-- POPULAR THINGS -->
-
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -161,61 +159,12 @@
         android:text="Popular"
         />
 
-    <TableLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
-
-        <TableRow android:id="@+id/popularProduct">
-
-            <ImageView
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="10dp"
-                android:background="@drawable/libreta"/>
-
-            <LinearLayout
-                android:layout_width="180dp"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Libretita de plastico"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Libreta tallada por los dioses del plastico."
-                    android:textColor="@color/cardview_dark_background"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Plasticos reciclados en el Himalaya."
-                    android:textColor="@color/cardview_dark_background"/>
-
-            </LinearLayout>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="7'99€"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_gravity="center_vertical" />
-
-        </TableRow>
-
-    </TableLayout>
-
-
-
-
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="8dp"/>
 
 
 </LinearLayout>
