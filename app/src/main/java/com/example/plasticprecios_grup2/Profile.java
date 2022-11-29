@@ -24,6 +24,11 @@ public class Profile extends AppCompatActivity {
         textViewUserName.setText(userNameText);
     }
 
+    public void goMapsActivity(View view){
+        Intent intent = new Intent(Profile.this, MapsActivity.class);
+        startActivity(intent);
+    }
+
     public void goLogin(View view) {
         Intent intent = new Intent(this, Login.class);
         startActivityForResult(intent, TEXT_REQUEST);

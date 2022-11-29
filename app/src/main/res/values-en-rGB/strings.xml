@@ -27,4 +27,5 @@
     <string name="dateTxt">day-month-year</string>
     <string name="stringProductos">Products</string>
     <string name="stringPopular">Popular</string>
+    <string name="ubicacion">Where are we?</string>
 </resources>

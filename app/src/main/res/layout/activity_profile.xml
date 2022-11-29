@@ -111,6 +111,33 @@
 
         <LinearLayout
             android:layout_width="380dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:background="@drawable/minimalist_info_icon" />
+
+            <Button
+                android:id="@+id/mapa"
+                android:onClick="goMapsActivity"
+                style="@style/Theme.ButtonProfile"
+                android:background="@android:color/transparent"
+                android:text="@string/ubicacion" />
+
+            <Button
+                style="@style/Theme.ButtonArrow"
+                android:background="@android:color/transparent"
+                android:text="@string/clicable_arrow" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="380dp"
             android:layout_gravity="center"
             android:layout_height="60dp"
             android:layout_marginTop="70dp"
