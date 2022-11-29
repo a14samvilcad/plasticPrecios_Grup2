@@ -44,8 +44,6 @@ public class FirstFragment extends Fragment {
 
         binding = FragmentFirstBinding.inflate(inflater, container, false);
 
-
-
         return binding.getRoot();
 
     }
@@ -57,9 +55,11 @@ public class FirstFragment extends Fragment {
         getProducts();
 
         //Llamada al metodo init para meter los valores en la RecyclerView
-        init(getView());
-
-
+        ListAdapter listAdapter = new ListAdapter(productsArrayList, getContext());
+        RecyclerView recyclerView = view.findViewById(R.id.listRecyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        recyclerView.setAdapter(listAdapter);
 
         binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,6 +70,14 @@ public class FirstFragment extends Fragment {
         });
 
         binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavHostFragment.findNavController(FirstFragment.this)
+                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+            }
+        });
+
+        binding.buttonThird.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(FirstFragment.this)
@@ -93,13 +101,6 @@ public class FirstFragment extends Fragment {
         binding = null;
     }
 
-    public void init(View view){
-        ListAdapter listAdapter = new ListAdapter(productsArrayList, getContext());
-        RecyclerView recyclerView = view.findViewById(R.id.listRecyclerView);
-        recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        recyclerView.setAdapter(listAdapter);
-    }
 
 
     //Metodo para coger los productos del metodo del node
